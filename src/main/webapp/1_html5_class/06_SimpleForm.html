@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_SimpleForm.html</title>
+</head>
+<body>
+
+	<form>
+	
+		<fieldset>
+			<legend>회원가입</legend>
+			<ol>
+				<li>
+					<label for='name'>이름</label>
+					<input type = 'text' id = 'name'/>
+				</li>
+				
+				<li>
+					<label for='gender'>성별</label>
+					<input type = 'radio' id='gender' name='gender' checked='checked'/>남자
+					<input type = 'radio' id='gender' name='gender'/>여자
+				</li>
+				
+				<li>
+					<label for='job'>직업</label>
+					<select id='job' name="job" >
+				    	<option value="none" selected>=== 선택 ===</option>
+				    	<option value='job1' >프로그래머</option>
+				    	<option value='job2' >학생</option>
+				    	<option value='job3' >무직</option>
+				    	<option value='job4' >주부</option>
+				 	</select>
+				</li>
+				
+				<li>
+					<label for='hobby'>취미</label>
+					<input type = 'checkbox' id='hobby' name='hobby'/>잠자기
+					<input type = 'checkbox' id='hobby' name='hobby'/>먹기
+					<input type = 'checkbox' id='hobby' name='hobby'/>숨쉬기
+					<input type = 'checkbox' id='hobby' name='hobby'/>멍때리기
+				</li>
+				
+				<li>
+					<label for=lover>애인</label>
+					<input type = 'radio' id='lover' name='lover' />있다
+					<input type = 'radio' id='lover' name='lover' />없다
+				</li>
+		
+				<li>
+					<input type="submit" value="확인" name='accept'>
+  					<input type="reset" value="취소" name='cancle'>
+				</li>
+			</ol>
+		</fieldset>
+		
+	</form>
+
+</body>
+</html>

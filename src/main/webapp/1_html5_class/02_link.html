@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02_link.html</title>
+</head>
+<body>
+
+<h2> 링크 연습</h2>
+
+	<ul>
+	<li><a href='/WebUI/1_html5_class/01_html5_section.html'>문서파일</a></li>
+	<li><a href='/WebUI/images/sample/sensitive.jpg'>이미지파일</a></li>
+	<li><a href='/WebUI/media/musicsample.mp3'>음악파일</a></li>
+	<li><a href='/WebUI/media/mediasample.mp4'>동영상파일</a></li>
+	</ul>
+	<hr/>
+	
+	<ul>
+	<!-- ./ 현재 디렉토리 ../ 상위 디렉토리 -->
+	<li><a href='01_html5_section.html'>문서파일</a></li> <!-- 같은 폴더내에 있으면 파일명만 적어도됨  -->
+	<li><a href='../images/sample/sensitive.jpg'>이미지파일</a></li>
+	<li><a href='../media/musicsample.mp3'>음악파일</a></li>
+	<li><a href='../media/mediasample.mp4'>동영상파일</a></li>
+	</ul>
+	<hr/>
+	
+	<audio controls>
+  	<source src="horse.ogg" type="audio/ogg">
+ 	<source src="../media/musicsample.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+	
+		<video width="320" height="240" controls>
+	  <source src="../media/mediasample.mp4" type="video/mp4">
+	  <source src="movie.ogg" type="video/ogg">
+	Your browser does not support the video tag.
+	</video>
+	
+	<iframe width="420" height="315"
+	src="http://www.nate.com">
+	</iframe>
+		
+	
+</body>
+</html>
