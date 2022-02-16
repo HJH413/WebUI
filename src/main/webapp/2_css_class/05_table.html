@@ -3,10 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <title>05_table.html</title>
+
+	<style type="text/css">
+		table {
+			border: 2px solid blue;
+			border-collapse: collapse;
+		}
+
+		td, th {
+			border: 1px dotted green;
+		}
+
+		table th{
+			padding: 10px 0px;
+			background-color: #787878;
+			border: 2px solid black;
+			font-size: 20px;
+
+		}
+
+		tr:hover {background: aliceblue;}
+
+		/*tr:nth-child(odd) {background: blue;}  !*odd 홀수 *!*/
+	</style>
+
 </head>
 <body>
 
-<table border ='2'>
+<table>
 	<!-- <tr>
 	<td colspan= '2' style="text-align:center;"><b>부서명</b></td>	<td style="text-align:center;"><b>전화번호(02+)</b></td>		<td style="text-align:center;"><b>팩스번호(02+)</b></td>
 	</tr> -->
@@ -20,17 +44,12 @@
 	</tr>
 	
 	<tr>
-	<td rowspan= '3'>비서실</td>	<td>비서실장</td>		<td>123-1111</td>						<td rowspan= '2'>321-1002(사장)<br/>321-1003(감사)</td>
+	<td rowspan= '2'>비서실</td>	<td>비서실장</td>		<td>123-1111</td>						<td rowspan= '2'>321-1002(사장)<br/>321-1003(감사)</td>
 	</tr>
 	
 	<tr>
 								<td>비서실</td>		<td>123-1112(사장)<br/>123-1113(감사)</td>	
 	</tr>
-	
-	<tr>
-								
-	</tr>
-	
 
 	<tr>
 	<td rowspan= '3'>홍보실</td>	<td>홍보실장</td>		<td>123-1001</td>						<td rowspan= '3'>321-1101</td>
