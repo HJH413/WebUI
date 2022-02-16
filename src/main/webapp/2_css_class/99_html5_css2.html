@@ -3,6 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <title>html5 structure</title>
+	<style>
+		body{
+			background-color: #E0C097;
+			width: 450px;
+		}
+		a{
+			color : beige;
+		}
+		h1 {
+			background-color: #2D2424;
+			width: 450px;
+			text-align: center;
+			border-radius: 10px;
+			color: beige;
+		}
+
+		h2{
+			background-color: #B85C38;
+			width: 450px;
+			text-align: center;
+			border-radius: 10px;
+			color: beige;
+		}
+		h2#header_h2,#nav_h2{
+			width: 200px;
+		}
+		mark {
+			background: none;
+			color: #B85C38;
+		}
+
+		#nav_ul_li {
+			background-color: #5C3D2E;
+			width: 400px;
+			color: beige;
+			border-radius: 10px;
+		}
+
+
+
+	</style>
 
 </head>
 <body>
@@ -13,30 +54,32 @@
 			</h1>
 			<h2>HTML5를 처음 공부하는 당신을 위해</h2>
 		</header>
-		<nav>
-			<ul>
-				<li>header</li>
-				<li>nav</li>
-				<li>section</li>
-				<li>article</li>
-				<li>footer</li>
+		<nav id="nav_ul_li">
+			<ul id="ul_li">
+				<li id="header"><a href="#header_h2">header</a></li>
+				<li id="nav"><a href="#nav_h2">nav</a></li>
+				<li id="section"><a href="">section</a></li>
+				<li id="article"><a href="">article</a></li>
+				<li id="footer"><a href="">footer</a></li>
 			</ul>
 		</nav>
 		<section>
-			<article>
+			<article id="info_article_header">
 				<header>
-					<h2>header란?</h2>
-					<time>posted 2016-01-01</time>
+					<h2 id="header_h2">header란?</h2>
+					<time id="header_time">posted 2016-01-01</time>
 				</header>
+				<div>
 				<p>header란 head와 다르다.</p>
 				<p>주로 문서의 제목을 나타낼 때 사용된다.</p>
+				</div>
 				<footer>
 					<p>comments (0)</p>
 				</footer>
 			</article>
-			<article>
+			<article id="info_article_nav">
 				<header>
-					<h2>nav란?</h2>
+					<h2 id="nav_h2">nav란?</h2>
 					<time>posted 2016-01-01</time>
 				</header>
 				<p>nav는 화면에서 메뉴를 주로 나타낸다.</p>
