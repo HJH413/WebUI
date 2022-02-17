@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!-- 부트스트랩 -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+    <link href="./css/jquery.fancybox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-hover-dropdown.js"></script>
+    <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/simpleparallax.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <style>
+
+        body {
+            background-color: #F0E5CF;
+        }
+
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        .navbar{ background-color: #F7F6F2; border: none; padding-bottom: 10px;  font-family: 'Nanum Gothic', sans-serif; font-weight: 300; font-size: 18px;height: 90px; text-transform: capitalize; border-bottom: 1px solid black}
+        .navbar-toggle {position: relative;margin-top: 40px;top: 2px;}
+        .navbar-nav {
+            padding-right: 10px;
+            margin-top: 20px;
+            background-color: #F7F6F2;
+            border-radius: 10px;
+        }
+        .navbar-nav li {
+            margin:0 20px;
+        }
+
+        #nav_id li:Hover{
+            background-color: #C8C6C6;
+        }
+
+        .btn {
+            font-size: 18px;
+        }
+
+        .navbar-brand {
+            margin-top: 15px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        footer {
+            font-size: 10px;
+            position:absolute;
+            bottom:0;
+            height:70px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container-fluid">
+        <header>
+            <!-- nav bar 부분 -->
+            <div class="container">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="home.html"> 강아지 카페 </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+                            <ul id = "nav_id" class="nav navbar-nav">
+                                <li><a href="info.html"> 우리가게 소개 </a></li>
+                                <li><a href="product.html"> 먹는것들 </a></li>
+                                <li><a href="dog.html"> 강아지들 </a></li>
+                                <li><a href="map.html"> 찾아오시는 길 </a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- // nav bar 부분 끝 -->
+        </header>
+    </div>
+</header>
+
+<div class="container">
+    <hr>
+    <footer>
+        <span class="glyphicon glyphicon-map-marker"></span>
+        서울 금천구 가산디지털2로 123 월드메르디앙벤처센터II 4층 413호
+        <br/>
+        <span class="glyphicon glyphicon-phone-alt"></span> 문의 전화 : 02-2025-8523
+    </footer>
+</div>
+</body>
+</html>
