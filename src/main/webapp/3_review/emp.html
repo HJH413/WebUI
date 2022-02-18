@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 부트스트랩 -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./mycss.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!--<style>
+        #emp_form {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+    </style>-->
+
+</head>
+<body>
+
+<!--<form id="emp_form">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <td><label>사번</label></td>
+            <td><input type="text"/></td>
+        </tr>
+        </thead>
+
+        <thead>
+        <tr>
+            <td><label>이름</label></td>
+            <td><input type="text"/></td>
+        </tr>
+        </thead>
+
+        <thead>
+        <tr>
+            <td><label>업무</label></td>
+            <td><input type="text"/></td>
+        </tr>
+        </thead>
+        <thead>
+        <tr>
+            <td><label>월급</label></td>
+            <td><input type="text"/></td>
+        </tr>
+        </thead>
+        <thead>
+        <tr>
+            <td><label>부서번호</label></td>
+            <td><input type="text"/></td>
+        </tr>
+        </thead>
+        <thead>
+        <tr>
+            <td>
+                <label></label>
+            </td>
+            <td>
+                <input type='submit' value="등록" class="btn btn-default"/>
+                <input type='reset' value="취소" class="btn btn-danger"/>
+            </td>
+        </tr>
+        </thead>
+    </table>
+</form>-->
+
+<h1>사원정보입력</h1>
+<div class="container">
+    <form id="from_id" class="form" action="EmpInsert.jsp">
+        <div class="form-group">
+            <label for='empno'>사번</label>
+            <input type='text' id='empno' class='form-control'/>
+        </div>
+
+        <div class="form-group">
+            <label for='ename'>이름</label>
+            <input type='text' id='ename' class='form-control'/>
+        </div>
+
+        <div class="form-group">
+            <label for='job'>업무</label>
+            <input type='text' id='job' class='form-control'/>
+        </div>
+
+        <div class="form-group">
+            <label for='sal'>월급</label>
+            <input type='text' id='sal' class='form-control'/>
+        </div>
+
+        <div class="form-group">
+            <label for='deptno'>부서번호</label>
+            <input type='text' id='deptno' class='form-control'/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" > 등록</button>
+            <button type="submit" class="btn btn-default form-control"> 취소</button>
+        </div>
+    </form>
+</div>
+<script src="./script/my.js" type="text/javascript">
+    /*document.getElementById('from_id').onsubmit = function () {
+        if (document.getElementById('empno').value == '') {
+            alert('필수 입력사항입니다.')
+            return false;
+        }
+        return true;
+    }*/
+</script>
+</body>
+</html>

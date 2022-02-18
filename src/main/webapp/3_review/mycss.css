@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+h1 {
+    font-size: 30px;
+    color:forestgreen;
+    text-align: center;
+}
+
+label {
+    color:green;
+}
