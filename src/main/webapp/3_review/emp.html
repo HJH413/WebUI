@@ -72,35 +72,35 @@
 
 <h1>사원정보입력</h1>
 <div class="container">
-    <form id="from_id" class="form" action="EmpInsert.jsp">
+    <form id="from_id" class="form" action="EmpInsert.jsp"> <!--method="post" url에 데이터 안보이게 하기-->
         <div class="form-group">
             <label for='empno'>사번</label>
-            <input type='text' id='empno' class='form-control'/>
+            <input type='text' id='empno' name='empno' class='form-control'/>
         </div>
 
         <div class="form-group">
             <label for='ename'>이름</label>
-            <input type='text' id='ename' class='form-control'/>
+            <input type='text' id='ename' name='ename' class='form-control'/>
         </div>
 
         <div class="form-group">
             <label for='job'>업무</label>
-            <input type='text' id='job' class='form-control'/>
+            <input type='text' id='job' name="job" class='form-control'/>
         </div>
 
         <div class="form-group">
             <label for='sal'>월급</label>
-            <input type='text' id='sal' class='form-control'/>
+            <input type='text' id='sal' name="sal" class='form-control' value="0"/>
         </div>
 
         <div class="form-group">
             <label for='deptno'>부서번호</label>
-            <input type='text' id='deptno' class='form-control'/>
+            <input type='text' id='deptno' name="deptno" class='form-control' value="30"/>
         </div>
 
         <div class="form-group">
             <button type="submit" class="btn btn-danger form-control" > 등록</button>
-            <button type="submit" class="btn btn-default form-control"> 취소</button>
+            <button type="reset" class="btn btn-default form-control"> 취소</button>
         </div>
     </form>
 </div>

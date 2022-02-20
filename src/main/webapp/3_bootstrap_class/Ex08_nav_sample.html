@@ -35,7 +35,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
               <ul class="nav navbar-nav">
-                <li><a href="#"> 우리가게 소개 </a></li>  
+                <li><a href="../3_review/emp.html"> 우리가게 소개 </a></li>
                 <li><a href="#"> 주력상품 </a></li>  
                 <li><a href="#"> 소소한 이야기 </a></li>  
                 <li><a href="#"> 찾아오시는 길 </a></li>                  
@@ -45,11 +45,42 @@
           </nav>
      </div>   
     <!-- // nav bar 부분 끝 -->
+    <div id="carousel-example-generic" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
 
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="./images/slide1.jpg" alt="First slide">
+        </div>
+        <div class="item">
+          <img src="./images/slide2.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+          <img src="./images/slide3.jpg" alt="Third slide">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div>
   </div> 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.min.js"></script>
+  <script>
+    $('.carousel').carousel({interval : 1000})
+  </script>
 </body>
 </html>
