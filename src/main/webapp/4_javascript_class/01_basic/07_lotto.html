@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lotto number</title>
+
+    <script>
+        //배열을 이용한 로또번호 추출
+        let arr = [];
+        for(let i = 0; i < 6; i++){
+            arr.push(Math.floor(Math.random()*45)+1);
+            for(let c = 0; c<i; c++){
+                if (arr[i] === arr[c]) {
+                    arr.pop();
+                    i--;
+                }
+            }
+        }
+        console.log(arr);
+
+        //set이용한 로또번호 추출
+        let s= new Set();
+        while (s.size<6){
+            s.add(Math.floor((45*Math.random())+1));
+        }
+        let arr2 = Array.from(s);
+
+        arr2.sort();
+        for(let i of arr2){
+            document.write(i + ' ');
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

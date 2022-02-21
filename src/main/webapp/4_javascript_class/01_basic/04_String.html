@@ -4,39 +4,39 @@
 <meta charset="UTF-8">
 <title> String 객체 </title>
 <script type="text/javascript">		
-	var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자';
-	document.writeln( str.indexOf('삶') + '<br/>');
-	document.writeln( str.lastIndexOf('삶')+ '<br/>');
-	document.writeln( str.indexOf('삶을') + '<br/>');
-	document.writeln( str.length + '<br/>');
+	/*var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자';
+	document.writeln( str.indexOf('삶') + '<br/>');//3 지정된 문자열 중에서 첫글자
+	document.writeln( str.lastIndexOf('삶')+ '<br/>');//17 //지정된 문자열 중에서 마지막글자
+	document.writeln( str.indexOf('삶을') + '<br/>');//11 //
+	document.writeln( str.length + '<br/>');//24 //문자열의 길이
 	
-	document.writeln( str.startsWith('삶') + '<br/>');
-	document.writeln( str.endsWith('삶') + '<br/>');
-	document.writeln( str.includes('삶') + '<hr/>');
+	document.writeln( str.startsWith('삶') + '<br/>');//false // 문자열이 지정된 문자안에서 첫글자인가?
+	document.writeln( str.endsWith('삶') + '<br/>');//false // 문자열이 지정된 문자안에서 마지막글자인가?
+	document.writeln( str.includes('삶') + '<hr/>');//true //문자열이 지정된 문자안에 존재하는가?*/
 
-	/*
-	var msg = '자바에서 웹프로젝트까지 열심히 하자!';
-	document.writeln( msg.charAt(3)+ '<br/>');
-	document.writeln( msg.slice( 5, 12 )+ '<br/>');
-	document.writeln( msg.substring( 5, 12 )+ '<br/>');
-	document.writeln( msg.substr(5, 7 ) + '<br/>');
-	document.writeln( msg.split(' ')+ '<br/>');
-	document.writeln( msg.concat('화이팅')+ '<br/>');
-	document.writeln( msg +  '<hr/>');
-	*/
-	
-	/*
+	/*var msg = '자바에서 웹프로젝트까지 열심히 하자!';
+	document.writeln( msg.charAt(3)+ '<br/>'); //서
+	document.writeln( msg.slice( 5, 12 )+ '<br/>');//웹프로젝트까지
+	document.writeln( msg.substring( 5, 12 )+ '<br/>');//웹프로젝트까지 -음수가 적용안됨
+	document.writeln( msg.substr(5, 12 ) + '<br/>');//웹프로젝트까지 열심히
+	document.writeln( msg.split(' ')+ '<br/>');//자바에서,웹프로젝트까지,열심히,하자!
+	document.writeln( msg.concat('화이팅')+ '<br/>');//자바에서 웹프로젝트까지 열심히 하자!화이팅
+	document.writeln( msg +  '<hr/>');//자바에서 웹프로젝트까지 열심히 하자!
+*/
 	var  text = '♡해yo';
-	document.writeln( text.length +  '<br/>');		
-	document.writeln( text.repeat(2) +  '<br/>');
-	document.writeln( text.codePointAt(0) +  '<br/>');	// 9825
-	document.writeln( String.fromCodePoint(9825) +  '<br/>');
-	*/
-	
+	document.writeln( text.length +  '<br/>');		//4
+	document.writeln( text.repeat(2) +  '<br/>'); // 2번반복?
+	document.writeln( text.codePointAt(0) +  '<br/>');	// 문자코드 추출 9825
+	document.writeln( String.fromCodePoint(9825) +  '<br/>'); // 문자코드 불러오기
 
-	
-	
-   </script>
+
+    //syrrogate pair - 2글자취급
+    document.writeln(String.fromCodePoint(128169)+ '<br/>');
+    var  text = '💩해yo';
+    document.writeln( text.length +  '<br/>');
+
+
+</script>
 
 
 </head>

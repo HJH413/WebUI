@@ -1,3 +1,17 @@
+<!--
+Java collection
+-> list
+-> set
+-> map
+
+JavaScript collection
+-> Array
+-> Set
+-> Map
+
+
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,21 +19,35 @@
 <title> Number 형과 형변환 </title>
 <script type="text/javascript">
 
-
+/*//0.확인
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MAX_SAFE_INTEGER+100); // 보장안됨
 // 1. 숫자 형식 메소드 
 var su = 123.456789;
-document.writeln( su.toExponential(2)  + "<br/>" );	
-document.writeln( su.toFixed(3)  + "<br/>" );		
-document.writeln( su.toFixed(7) + "<br/>" );	
-document.writeln( su.toPrecision(6)  + "<br/>" );	 
-document.writeln( su.toPrecision(10)  + "<br/>" );	
+document.writeln( su.toExponential(2)  + "<br/>" );	 // 1.23e+2  -> 1.23 * 10(2)
+document.writeln( su.toFixed(3)  + "<br/>" );		 //소숫점3세자리까지 출력하고 4번째자리 반올림
+document.writeln( su.toFixed(7) + "<br/>" );	    // 소숫점7자리까지 출력
+document.writeln( su.toPrecision(6)  + "<br/>" );	 // 전체 6자리 뒷자리 반올림
+document.writeln( su.toPrecision(10)  + "<br/>" );	 // 전체 10자리*/
 
 //-------------------------------------------------
 // 2. 형변환
 
+let n = '123abc'; //string
+document.writeln(typeof n + '<hr/>');
+document.writeln(Number(n) + '<br/>'); // NaN = Not a Number
+document.writeln(parseInt(n) + '<br/>');
+document.writeln(parseFloat(n) + '<br/>');
 
 
+/*
+* 숫자 + 문자열 -> 문자열처리
+* 숫자 - 문자열 -> 슷지취급
+* */
 
+document.writeln(typeof (123 + '4') + '<br/>');  // '1234'
+document.writeln(typeof (123 - '4') + '<br/>'); // 119
+document.writeln('<hr/>')
 </script>
 </head>
 <body>

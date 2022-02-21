@@ -13,7 +13,6 @@
   Time: 오전 11:00
   To change this template use File | Settings | File Templates.
 --%>
-
 <%
     // 0.화면의 입력값 얻오
     int empno = Integer.parseInt(request.getParameter("empno"));
@@ -42,12 +41,13 @@
     ps.setInt(4,sal);
     ps.setInt(5,deptno);
     //5. 전송 : executeUpdate();
-   int result = ps.executeUpdate();
-  System.out.println(result + "행을 실행");
+    int result = ps.executeUpdate();
+    System.out.println(result + "행을 실행");
     //6.닫기
     ps.close();
     con.close();
 %>
+
 <html>
 <head>
     <title>사원정보입력</title>
