@@ -13,8 +13,20 @@
 <script type="text/Javascript">
 	window.onload = function(){
     	document.getElementById('btn').onclick = function(){
+			//1.id 값으로 찾기
+			/*let name = document.getElementById('userName')
+			let result = document.getElementById('result')
+			result.innerHTML = name.value + '님, 안녕!'*/
 
- 
+			/*let name = document.querySelector('#userName')
+			let result = document.querySelector('#result')
+			result.innerHTML = name.value + '님, 안녕!'*/
+
+			//2. name 으로 찾기
+			let name = document.frm.username;
+			//let name = document.form[0].username;
+			let result = document.querySelector('#result')
+			result.innerHTML = name.value + '님, 안녕!'
     	}
     }
 </script>

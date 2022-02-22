@@ -1,0 +1,83 @@
+<!--
+	인자있는 자바스크립스 함수 호출
+	
+	[연습] 이벤트 핸들러 방식이나 이벤트 리스너 방식으로 수정하세요 
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> 9_exercise_event2 </title>
+</head>
+<body>
+<form name="frm">
+    <input type="button" value="스타일 A" id="a" class="btn">
+    <input type="button" value="스타일 B" id="b" class="btn">
+    <input type="button" value="스타일 C" id="c" class="btn">
+</form>
+<ul>
+    <li><a href="http://www.cnn.com" class="aa" id="a1"> 여기는 미쿡 </a></li>
+    <li><a href="http://news.bbc.co.uk" class="aa" id="a2"> 여기는 영쿡 </a></li>
+</ul>
+
+
+<script type="text/javascript">
+
+    let btn = document.getElementsByClassName('btn');
+
+    for (let i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+            //alert(btn[i].value); // alert(this.value);
+            switch (btn[i].value) {
+                case '스타일 A' :
+                    document.bgColor = 'red';
+                    document.fgColor = 'blue';
+                    break;
+                case '스타일 B' :
+                    document.bgColor = 'black';
+                    document.fgColor = 'white';
+                    break;
+                case '스타일 C' :
+                    document.bgColor = 'white';
+                    document.fgColor = 'black';
+                    break;
+            }
+        }
+    }
+
+    let aa = document.getElementsByClassName('aa');
+    for (let i = 0; i < aa.length; i++) {
+        aa[i].onclick = function (evt) {
+            evt.preventDefault();
+        }
+    }
+
+    /*document.getElementById('a').onclick = function () {
+        alert("색상변경");
+        document.bgColor = 'red';
+        document.fgColor = 'blue';
+    }
+
+    document.getElementById('b').onclick = function () {
+        alert("색상변경");
+        document.bgColor = 'black';
+        document.fgColor = 'white';
+    }
+
+    document.getElementById('c').onclick = function () {
+        alert("색상변경");
+        document.bgColor = 'white';
+        document.fgColor = 'black';
+    }*/
+
+    /*document.getElementById('a1').onclick = function (evt) {
+        evt.preventDefault();
+    }
+
+    document.getElementById('a2').onclick = function (evt) {
+        evt.preventDefault();
+    }*/
+</script>
+</body>
+</html>

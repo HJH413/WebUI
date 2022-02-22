@@ -9,7 +9,21 @@
 			- stopPropagation() : 이벤트 전달 취소
 			- preventDefault() : 이벤트 본래의 동작 취소
 	*/
+	window.onload = function () {
 
+		let inner = document.getElementById('inner');
+		inner.onclick = function (evt){
+			alert("안쪽 이벤트 발생");
+			evt.stopPropagation(); // outer 의 이벤트를 막음
+			evt.preventDefault(); //원래의 a태그 기능을 막음
+		}
+
+		let outer = document.getElementById('outer');
+		outer.onclick = function () {
+			alert("바깥쪽 이벤트 발생")
+		}
+
+	}
 
 </script>
 </head>
