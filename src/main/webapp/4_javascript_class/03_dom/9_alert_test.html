@@ -7,13 +7,17 @@
 
 	window.onload = function(){
 		// 1. alert
-		
-		
+		//window.alert('이 사이트는 이동되었습니다.');
+		//window.location.href = 'https://www.naver.com';
+        //location.href = 'https://www.naver.com';
+        //window.location = 'https://www.naver.com';
 		// 2. confirm
-		
-		
+        /*let result = window.confirm('이 사이트는 이동되었습니다. 이동하시겠습니까??');
+        if(result) {window.location.href = 'https://www.naver.com'
+        }*/
 		// 3. prompt : 
-		
+		let result = window.prompt('원하는 사이트를 입력하세요.');
+        window.location.href ='https://'+ result;
 	}
 
 </script>

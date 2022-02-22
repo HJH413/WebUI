@@ -1,0 +1,20 @@
+/*3. 스타일시트 파일을 만들어서 연결*/
+/*(1) table에 테두리(border) 지정*/
+table {
+    border: solid 3px black;
+}
+
+
+/*(2) 각 셀에 너비는 100 높이는60 지정*/
+/*(3) 각 셀에 색상을 노란계열로 지정*/
+td {
+    width: 100px;
+    height: 60px;
+    background-color: #FFE652;
+}
+/*(4) 첫 번째 열의 셀에 first 라는 클래스명을 부여하고
+        그 클래스명으로 찾아서 배경색을 파랑색 계열로 지정*/
+
+td.first {
+    background-color: #C2FFF9;
+}

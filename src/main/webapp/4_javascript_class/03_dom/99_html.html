@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--1. html 파일 만들기-->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+    <!--3. 스타일시트 파일을 만들어서 연결-->
+    <link rel="stylesheet" href="./99_Stylesheet.css">
+    <!--5. 자바스크립트(js) 파일을 하나 만들어서 연결-->
+    <script src="./99_javascript.js"></script>
+</head>
+<body>
+
+<!--2. 3행 2열의 테이블 만들기-->
+<!--(1) table 엘리멘트에 tbl 아이디값을 지정-->
+    <table id="tbl">
+        <!--(2) 테이블 각각의 셀에 내용
+
+        커피               녹차
+
+        케익               빵
+
+        과자               초코렛-->
+
+        <tr>
+            <!--(4) 첫 번째 열의 셀에 first 라는 클래스명을 부여하고
+            그 클래스명으로 찾아서 배경색을 파랑색 계열로 지정-->
+
+            <!--4. 각 셀에 item 클래스명을 부여하고 각각에 price 속성 추가하기
+            ex) class="a b" price='100'
+            1000           2000
+            1500            2500
+            4000          4500-->
+            <td class="first item" price="1000">커피</td>
+            <td class="item" price="2000">녹차</td>
+        </tr>
+        <tr>
+            <td class="first item" price="1500">케익</td>
+            <td class="item" price="2500">빵</td>
+        </tr>
+        <tr>
+            <td class="first item" price="4000">과자</td>
+            <td class="item" price="4500">초코렛</td>
+        </tr>
+    </table>
+</body>
+</html>
