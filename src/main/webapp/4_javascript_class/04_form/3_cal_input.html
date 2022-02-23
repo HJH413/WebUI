@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title> 폼 예제 3 </title>
-<script type="text/javascript">
+    <meta charset="UTF-8">
+    <title> 폼 예제 3 </title>
+    <script type="text/javascript">
+        window.onload = function () {
 
-</script>
+            // 오늘의 날짜 구해서 출력하기
+            let today = new Date();
+            document.frm1.y.value = today.getFullYear();
+            document.frm1.m.value = today.getMonth() + 1;
+            document.frm1.d.value = today.getDate();
+
+            document.querySelector('#btn').onclick = function () {
+                //1. 사용자가 입력한 년/월/일 값을 얻어오기
+                let y = document.frm1.y.value
+                let m = document.frm1.m.value
+                let d = document.frm1.d.value
+                //2. 얻어온 년/월/일 값들을 Date() 클래스에 지정
+                /*let day = new Date();
+                day.setFullYear(y);
+                day.setMonth(m-1);
+                day.setDate(d);*/
+
+                let day = new Date(y + "/" + m + "/" + d);
+
+                /*console.log(day);*/
+                //3. 요일값을 얻어옴
+                let checkDay = day.getDay();
+                /*document.writeln(checkDay);*/
+                //4.요일별 배열을 만들어서 해당 값을 화면 출력
+                let dayArr = ['일', '월', '화', '수', '목', '금', '토']
+                document.frm1.w.value = dayArr[checkDay];
+            }
+        }
+    </script>
 </head>
 <body>
 
-<hr><hr>
+<hr>
+<hr>
 
 요일을 알아봅시다. <br>
 
 <form name="frm1">
-	<input type="text" name="y" size=4>년 
-	<input type="text" name="m" size=2>월
-	<input type="text" name="d" size=2>일
-	<input type="button" id='btn' value="☞">
-	<input type="text" name="w" size=4>요일입니다.
+    <input type="text" name="y" size=4 placeholder="ex:1994">년
+    <input type="text" name="m" size=2 placeholder="ex:04">월
+    <input type="text" name="d" size=2 placeholder="ex:13">일
+    <input type="button" id='btn' value="☞">
+    <input type="text" name="w" size=4>요일입니다.
 </form>
 
-<hr><hr>
+<hr>
+<hr>
 
 
 </body>

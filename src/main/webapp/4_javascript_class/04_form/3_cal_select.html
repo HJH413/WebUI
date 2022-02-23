@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>날짜 선택</title>
@@ -30,10 +30,48 @@ window.onload = function(){
 	var frm = document.frm;
 	
 	// 년 구하기
-	for( var j=year-5;  j<= year+5; j++){
-		frm.y.add( new Option(j, j));				// 만들고 브라우저 F12에서 Elements로 확인 : Option(j)와 Option(j,j) 차이
+	for( let j=year-5;  j<= year+5; j++){
+		frm.y.add( new Option(j, j));	// 만들고 브라우저 F12에서 Elements로 확인 : Option(j)와 Option(j,j) 차이
 	}
 
+	// 월 구하기
+
+	for( let i=1;  i<= 12; i++){
+		frm.m.add( new Option(i, i));	// 만들고 브라우저 F12에서 Elements로 확인 : Option(j)와 Option(j,j) 차이
+	}
+
+	for( let k=1;  k<= lastDays[month]; k++){
+		frm.d.add( new Option(k, k));
+	}
+
+
+
+	// 오늘의 날짜 선택
+	let today = new Date();
+	document.frm.y.value = year;
+	document.frm.m.value = month+1;
+	document.frm.d.value = date;
+
+	let toDate = today.getDay();
+	document.frm.w.value = weeks[toDate];
+
+	frm.y.onchange = calc;
+	frm.m.onchange = calc;
+	//윤년 처리및
+	//요일 처리
+	function calc() {
+		let y = frm.y.value;
+		let m = frm.m.value;
+
+		frm.d.length = 0;
+		//object.options.length=0;
+
+
+		for( let k=1;  k<= lastDays[m-1]; k++){
+
+			frm.d.add( new Option(k, k));
+		}
+	}
 }
 </script>
 
