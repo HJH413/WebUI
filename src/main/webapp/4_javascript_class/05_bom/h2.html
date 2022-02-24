@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>h2</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            let sel = document.frm.location;
+            for (let i = 0; i < sel.length; i++) {
+                sel[i].onclick = function () {
+                    opener.document.frm.location.value = document.frm.location.value;
+                    /*switch (sel[i].value) {
+                        case '0' :
+                            opener.document.frm.location.value = '가산';
+                            break;
+                        case '1' :
+                            opener.document.frm.location.value = '부천시';
+                            break;
+                        case '2' :
+                            opener.document.frm.location.value = '부평';
+                            break;
+                    }*/
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="frm">
+    <input type="text" name="city"><hr/>
+    <input type="radio" name="location" value='가산'> 가산 <br>
+    <input type="radio" name="location" value='부천시'> 부천시 <br>
+    <input type="radio" name="location" value='부평'> 부평 <br>
+</form>
+</body>
+</html>

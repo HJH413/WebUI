@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>리터럴 함수</title>
+    <meta charset="UTF-8">
+    <title>리터럴 함수</title>
 </head>
 <body>
-	<script>
-	/*
-	// @ function 명령은 정적인 구조이고, 
-	// @ Function 생성자와 함수리터럴은 실행시 판단한다.
+<script>
+    /*
+    // @ function 명령은 정적인 구조이고,
+    // @ 함수리터럴은 실행시 판단한다.
 
-	document.writeln('삼각형의 면적은 2 ' +  triangle(4,3) + '</br>');
-	function triangle ( base, height ){
-				return base * height / 2;
-	}
-		document.writeln('삼각형의 면적은 ' +  triangle(4,3) + '</br>');		
-		var triangle = function( base, height ){
-			return base * height / 2;
-		} 	
-	*/
-	
-	
-	// @ 함수는 데이터형의 일종이다.
-	
-	
-	</script>
+    document.writeln('삼각형의 면적은 2 ' +  triangle(4,3) + '</br>');
+    function triangle ( base, height ){
+                return base * height / 2;
+    }
+        document.writeln('삼각형의 면적은 ' +  triangle(4,3) + '</br>');
+        var triangle = function( base, height ){
+            return base * height / 2;
+        }
+    */
+
+    /*document.writeln('삼각형의 면적은 2 ' +  triangle(4,3) + '</br>');
+    function triangle ( base, height ){
+        return base * height / 2;
+    }*/
+
+    /*let triangle = function( base, height ){
+        return base * height / 2;
+    }
+    document.writeln('삼각형의 면적은 ' +  triangle(4,3) + '</br>');
+    document.writeln('함수 : ' + triangle + "<hr/>")
+
+    triangle = '안녕하세요.';
+    document.writeln('함수 : ' + triangle + "<hr/>")*/  //javacript 는 함수도 변수이고 자료형에 관대하다.
+    // @ 함수는 데이터형의 일종이다.
+    /*function doA() {
+        document.write('함수 A <br/>');
+    }
+    function doB() {
+        document.write('함수 B <br/>');
+    }
+
+    let arr = [doA, doB];
+    console.log(arr);
+
+    arr[0]();*/
+
+    //함수도 리터럴(변수의 값)
+    //함수도 다른 함수의 인자
+    //func(a)
+    /*let f1 = function (){return 2;};
+    let f2= function (){return 1;};
+    let f3 = function (a){return a*a;};
+
+    function f4(a1, a2, a3) { // a1=2 a2=1 a3=3 => 3*3 f3 = 9
+        return a3(a1() + a2()); // f4 a3에 a1과 a2의 값을 저장한다.
+    }
+
+    document.write('결과:' + f4(f1, f2, f3));*/
+
+    function f4(a1, a2, a3) { // a1=2 a2=1 a3=3 => 3*3 f3 = 9
+        return a3(a1() + a2()); // f4 a3에 a1과 a2의 값을 저장한다. function f4에 a3의 값을 표현한다
+    }
+
+    document.write('결과:' + f4(
+        function () {
+            return 2;
+        },
+        function () {
+            return 1;
+        },
+        function (a) {
+            return a * a;
+        }));
+
+
+</script>
 </body>
 </html>

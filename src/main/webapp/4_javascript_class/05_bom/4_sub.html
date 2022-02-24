@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript">
-	function sel(){
-		
+	/*window.onload = function (){
+		let gender = document.fm.gender;
+		for (let i = 0; i < gender.length; i++) {
+			gender[i].onclick = function () {
+				parent.document.frm.result.value = document.fm.gender.value;
+			}
+		}
+	}*/
+	function sel() {
+		parent.document.frm.result.value = document.fm.gender.value;
 	}
 </script>
 <title></title>

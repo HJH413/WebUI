@@ -2,31 +2,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> 부분독립페이지 </title>
+<title> 9_iframe.html </title>
 <script type="text/javascript">
 	window.onload = function () {
 		let sel = document.frm.site
 		for (let i = 0; i < sel.length ; i++) {
 			sel[i].onclick = function () {
-				document.ifrm.fm.result.value = sel[i].value;
+				document.querySelector('#ifrm').src= this.value;
 			}
 		}
-
 	}
 </script>
 </head>
 <body>
 
 <form name="frm">
-		<input type="radio" name="site"  value='다음'> 다음 <br>
-		<input type="radio" name="site"  value='네이버'> 네이버 <br>
-		<input type="radio" name="site"  value='네이트'> 네이트 <br>
+		<input type="radio" name="site"  value='http://www.daum.net'> 다음 <br>
+		<input type="radio" name="site"  value='http://www.ikosmo.co.kr'> 코스모 <br>
+		<input type="radio" name="site"  value='http://www.nate.com'> 네이트 <br>
 		결과받기 : <input type='text' name='result' size='20'/>
 		<br/>
 		<br/>
 </form>
 
-<iframe name='ifrm'	width="420" height="315" src="4_sub.html">
+<iframe id="ifrm" name='ifrm'	width="420" height="315" src="">
 </iframe>
 <!-- iframe 에서 바깥의 본체를 찾을때는 parent -->
 </body>
