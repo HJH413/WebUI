@@ -16,9 +16,49 @@
 		//------ 함수 호출
 		add(10,20); 
 */
-		
+/*
+* var callBackFunc = function (result){
+            document.write('[결과] : ' + result + "<br/>");
+            }
+* */
 
-		
+//----------------------------------------------
+		function add(a,b,callBackFunc){ // function(result) 인자에 callBackFunc의 값이 들어감
+            let result = a + b;
+            callBackFunc(result); // callBackFunc(a+b)
+        }
+        add(10,20,function(result){ //function(callBackFunc(a+b)) -> function(result = 30)
+            document.write('[결과] : ' + result + "<br/>"); // function 의 인자를 출력함
+        }); //인자에 함수가 들어올 수 있으며 원래 인자의 값을 들어온
+//함수의 인자 값으로 사용가능하다.
+
+
+//----------------------------------------------
+function add2(a,b,callBackFunc){
+    let result = a + b;
+    callBackFunc(result);
+
+    /*var returnFunc = function (){
+        return a + "+" + b + "=" + result;
+    };
+    return returnFunc;*/
+    return function (){ // add2에 해당 함수를 리턴한다
+        return a + "+" + b + "=" + result;
+    };
+}
+// 그래서 returnVar 에 function (){ return a + "+" + b + "=" + result; }; 을 불러옴
+let returnVar = add2(10,20,function(callBackFunc){
+    document.write('[결과] : ' + callBackFunc + "<br/>");
+});
+document.write('리턴값은 결과값: ' + returnVar());
+    /*let add = function (a,b){
+        result = a+b;
+        return function () {
+            document.write('[결과] : ' + result + "<br/>");
+        }
+    }(10,20);
+    add();*/
+
 		
 </script>
 </head>

@@ -4,7 +4,49 @@
 	<meta charset="UTF-8">
 	<title>자바스크립트 변수와 범위</title>
 	<script>
+		/*//1.글로벌 변수와 지역 변수
+		var scope = '글로벌변수'
+		function getValue() {
+			var scope = '지역변수';
+			return scope;
+		}
 
+		document.write("1> " + getValue()+"<br/>")
+		document.write("2> " + scope+"<br/>")*/
+
+		//2 변수 선언시 var 생략가능 -> 글로벌변수
+		// *** 변수 선언시 반드시 var / let / const 꼭 사용하기
+		/*scope = '글로벌변수'
+		function getValue() {
+			scope = '지역변수';
+			return scope;
+		}
+
+		document.write("1> " + getValue()+"<br/>")
+		document.write("2> " + scope+"<br/>")*/
+
+		//3. 지역변수는 함수 전체에 유효하다. -> 지역변수 선언은 함수 앞쪽에서
+		var scope = '글로벌변수'
+		function getValue() {
+			document.write("0> " + scope + "<hr/>")
+			var scope = '지역변수';
+			document.write("0> " + scope + "<hr/>")
+			return scope;
+		}
+
+		document.write("1> " + getValue()+"<br/>")
+		document.write("2> " + scope+"<br/>")
+
+		//4. 지역변수는 함수블록에서 유효하다.
+		if(true) { //if 문은 함수블록이 아님
+			var i = 100;
+		}
+		document.write("i=" + i); // 그래서 출력가능
+
+		function test() { //함수블록
+			var  j = 10;
+		}
+		document.write("j=" + j); //함수블록 밖에서 불러오니까 오류남
 	</script>
 </head>
 

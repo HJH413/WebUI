@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title> Javascript 객체지향 </title>
+    <meta charset="UTF-8">
+    <title> Javascript 객체지향 </title>
 </head>
 <body>
 <script>
 
-//0. 	클래스 선언 -  생성자로 초기화하기
-function Student(id, name, dept){
-	this.id = id;
-	this.name = name;
-	this.dept = dept;
-	
-	this.display =function(){
-		var str  = "학번: "+id;
-		str += "/이름:" + name;
-		str += "/학과:" + dept + "<br/>"; 
-		return   str;
-	}
-}
+    //0. 	클래스 선언 -  생성자로 초기화하기
+    /*function Student(id, name, dept){
+        this.id = id;
+        this.name = name;
+        this.dept = dept;
 
-var kim = new Student("001","김길동", "컴공");
-var lee = new Student("002","이길동", "경영");
+        this.display =function(){
+            var str  = "학번: "+id;
+            str += "/이름:" + name;
+            str += "/학과:" + dept + "<br/>";
+            return   str;
+        }
+    }*/
+    /*var Student = function (id, name, dept) { //변수명을 클래스처럼 쓸때는 앞자리 대문자로
+        this.id = id;
+        this.name = name;
+        this.dept = dept;
 
-document.write( kim.display() );
-document.write( lee.display() );
+        this.display = function () {
+            var str = "학번: " + id;
+            str += "/이름:" + name;
+            str += "/학과:" + dept + "<br/>";
+            return str;
+        }
+    }
 
+    var kim = new Student("001","김길동", "컴공");
+    var lee = new Student("002","이길동", "경영");
+
+    document.write( kim.display() );
+    document.write( lee.display() );*/
+
+    /*class Student {
+        constructor() {
+        }
+    }*/
+    function Student(name, kor, eng, math) { //생성자 생성
+        //멤버변수로 지정
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+		// 멤버 메소드
+		this.sum = function (){
+			return kor+eng+math;
+		}
+    }
+	let s1 = new Student('김김김',90,90,90);
+	document.write(s1.name + " > " + s1.sum() + "<br/>")
+
+	let s2 = new Student('이이이',80,80,80);
+	document.write(s2.name + " > " + s2.sum() + "<br/>")
+
+	// 자바스크립트는 멤버(변수, 함수)를 동적으로 추가 가능
+	/*s1.showInfo = function (){
+		return this.name + ">>" + (this.kor+this.eng+this.math)/3 + "<hr/>";
+	};*/
+	Student.prototype.showInfo = function (){ //Student class 에 함수를 외부에서 추가
+		return this.name + ">>" + (this.kor+this.eng+this.math)/3 + "<hr/>";
+	};
+	document.write(s1.showInfo())
+
+	document.write(s2.showInfo())
 </script>
 </body>
 </html>

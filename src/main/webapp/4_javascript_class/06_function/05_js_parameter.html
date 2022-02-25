@@ -4,7 +4,22 @@
 	<meta charset="UTF-8">
 	<title> 파라메터 인자</title>
 	<script>
-
+		// 1> 기본형이 인자인 경우 - call by value
+		let pri = 100;
+		function priParam(pri){
+			pri--;
+			return pri;
+		}
+		document.write("1.기본형 인자 : " + priParam(pri) + '<br/>'); //99
+		document.write("1.기본형 인자 : " + pri + '<br/>'); //100
+		// 2> 참조형이 인자인 경우 - call by reference
+		let ref = [1,2,3,4,5] // 배열형, 클래스형
+		function refParam(ref){
+			ref.pop();
+			return ref;
+		}
+		document.write("2.참조형 인자 : " + refParam(ref) + '<br/>'); //1234
+		document.write("2.참조형 인자 : " + ref + '<br/>'); //1234
 	</script>
 </head>
 
