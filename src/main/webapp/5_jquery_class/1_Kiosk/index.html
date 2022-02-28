@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>kiosk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="kiosk.css" rel="stylesheet">
+    </style>
+
+    <!----------------------------------------------------------------------------------------------------->
+    <script src="../lib/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="kiosk.js?after" type="text/javascript"></script>
+</head>
+<body>
+<header>
+    <div class="header_div">
+        <div>
+            <p class="h3" id="title_h3">
+                치킨 패티 전문 버거
+            </p>
+        </div>
+        <nav id="nav_id" class="navbar navbar-expand-lg navbar-light ">
+            <div id="nav_div" class="container-fluid">
+                <P class="navbar-brand"></P>
+                <!-- toggle btn -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav" id="nav_bar">
+                        <li class="nav-item"><a class="nav-link" href="#">치킨버거</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">회원목록조회/수정</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">회원매출조회</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--메뉴 시작-->
+<form>
+<main>
+    <div class="kiosk_top"></div>
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!--  햄버거 추가 시작 -->
+            <div class="col-md-4">
+                <div class="myBorder">
+                        <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1633511562-QIONN.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=116&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>치칸바베큐 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">두꺼운치킨패티 베이컨버거</li>
+                        </ul>
+                        <p class="text-center mb-0">5,300원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price1" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1628070443-XFPBZ.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=114&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>에멘탈치즈 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">에멘탈 치즈 치킨 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">5,100원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price2" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1620019743-WPDBB.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=106&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>체다치즈 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">체다치즈 치킨 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">5,100원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price3" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616480109-NHROT.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/upload_file/product_info/1616480109-NHROT.png" class="h3 text-decoration-none"><h3 text align= 'center'>2치킨 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">치킨패티2장 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">6,600원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price4" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616480122-HYWCI.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=101&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>양념치킨 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">양념치킨패티 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">4,300원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price5" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616479043-FJDVN.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=100&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>간장마늘 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">간장 치킨버거</li>
+                        </ul>
+                        <p class="text-center mb-0">3,900원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price6" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616389716-CPORN.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=76&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>새우불고기 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">통새우살 불고기패티 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">4,500원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price7" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616389661-LLPDG.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=77&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>에그블고기 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">불고기 소스랑 계란 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">3,500원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price8" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616055241-EYPWG.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=80&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>치킨 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">치킨 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">4,100원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price9" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616055291-RNIEC.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=82&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>불 치킨 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">매운 치킨패티 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">42,00원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price10" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616055336-FOPBZ.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=83&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>딥치즈 치킨 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">치즈 통가슴살패티 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">4,400원</p>
+                        <p class="text-center mb-0">
+                            <input name='price'  id="price11" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="myBorder">
+                    <img class="card-img rounded-0 img-fluid" src="https://momstouchdev.co.kr/upload_file/product_info/1616055398-ZHVMP.png">
+                    <div class="card-body">
+                        <a href="https://momstouchdev.co.kr/menu/view.php?idx=85&pageNo=1&field=&keyword=&v_sect=&s_gubun=&s_level=&s_gender=&s_sect1=CG0005&s_sect2=&s_order=" class="h3 text-decoration-none"><h3 text align= 'center'>인크레더블 버거</h3></a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-center">뭔가 많이들어가서 맛있는 버거</li>
+                        </ul>
+                        <p class="text-center mb-0">5,300원</p>
+                        <p class="text-center mb-0">
+                            <input name='price' id="price12" class="price" type="number" placeholder="0" max="99" min="0"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--  햄버거 추가 마지막 -->
+        </div>
+    </div>
+    <!-- End Content -->
+    <div class="kiosk_bottom"></div>
+</main>
+
+<!--메뉴 끝-->
+<footer>
+    <div class="footer_div">
+        총합 : <input type="text" name="total_price" id="total_price">
+        가격 : <input type="submit" value="총합">
+    </div>
+</footer>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+</html>
