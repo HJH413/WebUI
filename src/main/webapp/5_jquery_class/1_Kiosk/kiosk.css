@@ -64,10 +64,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #888888;
-    padding: 40px 50px;
+    background-color: #FFFFFF;
+    padding: 20px 50px;
     box-sizing: border-box;
     text-align: center;
+    border-bottom: 1px solid rgba(121, 121, 121, 0.3);
 }
 #nav_id {
     background-color: #F0F0F0;
@@ -94,7 +95,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--horizontal-space);
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 /*하단바*/
@@ -102,9 +103,14 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #888888;
-    padding: 100px 50px;
+    background-color: #FFFFFF;
+    padding: 10px;
     box-sizing: border-box;
     border-top: 1px solid rgba(121, 121, 121, 0.3);
     text-align: center;
+}
+
+div.scroll {
+    height: 150px;
+    overflow: scroll;
 }
