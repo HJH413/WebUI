@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title> 첫 연습 </title>
+
+	<style type="text/css">
+		.active {
+			border: 2px solid red;
+			outline: 2px dotted orange;
+		}
+	</style>
+
+    <script src="../lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            let man = $('.man')
+            man.css(
+                {
+                    'background-color': 'pink'
+                });
+            let woman = $('.woman')
+            woman.css({
+                'color': 'orange',
+                'background-color': 'black'
+            });
+			woman.hover(function (){
+				woman.css({
+					'color': 'red',
+					'background-color': 'blue'
+				});
+			}, function (){
+				woman.css({
+					'color': 'orange',
+					'background-color': 'black'
+				});
+			})
+
+			//(2)
+			/*let redBox = $('.inputText')
+			redBox.focus(function (){
+				redBox.css ({
+					'background-color': 'blue'
+						});
+			}).blur(function () {
+				redBox.css ({
+					'background-color': 'white'
+				});
+			});*/
+			let redBox = $('.inputText')
+			redBox.focus(function (){
+				$(this).addClass('active');
+			}).blur(function () {
+				$(this).removeClass('active');
+			});
+
+			//(3)
+			/*
+			* Jquery setter/getter 함수 동일
+			* 함수 () : getter
+			* 함수 (인자) : setter
+			*
+			* attr('src') : attribute 속성값을 가지고 오거나
+			* attr('src', 'ㅌㅌㅌ') : attribute 속성값 지정하는 함수
+			* */
+
+			//alert($('#divText').text())
+			$('#divText').text('<img src="images/grim.jpg" alt="">');
+			$('#divHtml').html('<img src="images/grim.jpg" alt="">');// 태그의 역할은 html
+			$('#divEmpty').empty();
+			$('#changeGrim').click(function (){
+				let img = $(this).attr('src'); // img = 'images/puppy.jpg'
+				$(this).attr('src', img.replace('puppy','cat')); // puppy -> cat 으로 글자를 변경한다.
+			});
+
+            //(4)
+            /*
+            * 태그와 태그 사이트 값 : text() / html() --> (자바스크립트) innerHTML
+            * form 의 입력값(선탠값) = value 값 : val()
+            * */
+            $('#tf').val('홍길동');
+            $('#ta').val('작성중........');
+            $('#sel').val('busan');
+            $('#sel_m').val(['seom1','seom3']);
+
+            $('#check').click(function (){
+                let msg = "";
+                msg += $('#tf').val() + "/";
+                msg += $('#ta').val() + "/";
+                msg += $('#sel').val() + "/";
+                msg += $('#sel_m').val() + "/";
+
+                alert(msg)
+            });
+
+            //(5) 동적 태그
+            let actor = $('#actor');
+            let tae = $('#tae');
+            let su = $('#su')
+            let bin = $('#bin')
+
+            actor.append(tae); //배우에 김태희 붙이기
+            su.appendTo(actor); // 김수현에 배우 붙이기
+
+            actor.append('<div>한배우</div>');
+
+            let n = $('<div/>')
+            n.text('두배우');
+            n.appendTo(actor);
+
+            //(6)
+            /*$('.data').click(function (){
+                alert($(this).text());
+            })
+*/
+            $('.data').each(function (){
+                $('.data').click(function (){
+                    //alert($(this).text());
+                    alert(this.innerHTML)
+                })
+            })
+
+        });//end
+    </script>
+</head>
+<body>
+<!--  1 -->
+<ul>
+    <li class="man">김수현</li>
+    <li class="woman">김희애</li>
+    <li class="woman">송혜교</li>
+    <li class="man">하정우</li>
+    <li class="woman">김태희</li>
+</ul>
+<!-- 2 -->
+<input type="text" class="inputText"/>
+<input type="text" class="inputText"/>
+<input type="text" class="inputText"/>
+
+
+<!-- 3 -->
+<div id="divText">여기에 글씨를</div>
+<div id="divHtml">여기에 그림을</div>
+<div id="divEmpty">여기를 비움</div>
+<p>
+    <img src="images/puppy.jpg" id='changeGrim'>
+</p>
+
+<!-- 4 -->
+<p>
+    이름 : <input id="tf" type="text" size="20"/><br/>
+    메세지 : <textarea id="ta" rows="3" cols="20"></textarea><br/>
+    주소 : <select id="sel">
+    <option value="seoul">서울</option>    <!-- option에 value 값 없어도 됨 -->
+    <option value="busan">부산</option>
+    <option value="masan">마산</option>
+    <option value="incheon">인천</option>
+</select>
+    <select id="sel_m" multiple="multiple">
+        <option value="seom1">제주도</option>
+        <option value="seom2">울릉도</option>
+        <option value="seom3">독도</option>
+        <option value="seom4">거제도</option>
+    </select><br/>
+    <input type='button' id='check' value='확인'/>
+    <input type='button' id='init' value='초기화'/> <!--  [과제] 클릭시 값 지정하려면  -->
+<div id='result'></div>
+</p>
+
+<!-- 5 -->
+<div id="actor">배우</div>
+<div id="tae">김태희</div>
+<div id="su">김수현</div>
+<div id="bin">현빈</div>
+<!-- [ 과제 ] 동적 테이블 만들기  -->
+
+<!-- 6 -->
+<div class="data">이름</div>
+<div class="data">직업</div>
+<div class="data">나이</div>
+
+
+</body>
+</html>

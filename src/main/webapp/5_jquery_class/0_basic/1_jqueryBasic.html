@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> 첫 연습 </title>
+    <script src="../lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            /*$('#here').click(function (){  //클릭
+                $(this).text("클릭하면 내용 바뀜"); //텍스트 변경 $('#here').text("클릭하면 내용 바뀜");  // this 는 이벤트 click 을 선택한 자신을 지칭함.
+            });*/
+            // mouseenter <-> mouseleave
+            /*$('#mouse1').mouseenter(function (){
+                $(this).text("mouseenter");
+            }).mouseleave(function (){
+                $(this).text("mouseleave");
+            })*/
+            // mouseover <-> mouseout
+            /*$('#mouse2').mouseover(function (){
+                $('#mouse2').text("mouseover");
+            }).mouseout(function (){
+                $(this).text("mouseleave");
+            })*/
+
+            /*$('#here').hover(function (){
+                $(this).css('border', '3px solid green')
+            },function (){
+                $(this).css('border', '3px dotted yellow')
+            })*/
+            //효과함수
+            /*$('#here').fadeOut('slow').fadeIn('slow');*/
+            /*$('#here').slideUp('slow').slideDown('slow');
+            $('#mouse1').slideDown(3000).slideUp(3000);  // down -> up은 작동안함?*/
+
+            let s = $('#student') // 사용빈도가 높은 것들은 변수로 지정
+            let a = s.find('#age');
+            a.css({
+                'border': '2px solid red',
+                'color': 'orange',
+                'background-color': 'skyblue'
+            });
+        });//end
+
+
+    </script>
+</head>
+<body>
+
+
+<div id="here">
+    아자아자 제이쿼리~~!!! 017
+</div>
+<div id="mouse1">
+    mouseenter
+</div>
+
+<div id="mouse2">
+    mouseover
+</div>
+
+<div id="student">
+    <div id="name">홍길동</div>
+    <div id="age">34</div>
+</div>
+
+
+</body>
+</html>
