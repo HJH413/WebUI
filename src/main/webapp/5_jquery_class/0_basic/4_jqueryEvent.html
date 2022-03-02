@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>jquery event</title>
+    <meta charset="UTF-8">
+    <title>jquery event</title>
 
-<style type="text/css">
-	.bg { background : yellow; }
-	.border { border : 3px dotted red; }
-</style>
+    <style type="text/css">
+        .bg {
+            background: yellow;
+        }
 
+        .border {
+            border: 3px dotted red;
+        }
+    </style>
+    <script src="../lib/jquery-3.6.0.js"></script>
+    <script>
+		//text() / html() : 태그와 태그 사이의 값
+		//val() : value 값 ==> 폼 태그 안에 사용자 입력값이나 선택값
+        $(function () {
+			//도시이름을 클릭하면 밑에다가 출력
+			/*$('li').click(function (){
+				//$('#result').append($(this).text());
+				$('#result').text($(this).text());
+			})*/
+			/*$('li').one('click', function (){  //bind 는 이벤트가 연결될때마다 실행 one 는 이벤트가 한번씩만 실행
+				$('#result').text($(this).text());
+			});
+*/
+			$('h1').css({'cursor' : 'pointer'}).click(function (){
+				let li = $('<li/>').text(new Date());
+				$('ul').append(li)
+			});
+			//*****************************************
+			//동적으로 만들어진 요소에는 이벤트 안 발생하니까
+			// - on() 함수 이용
+			// - live() : 1.7 이전이라 사용하지 않기
+			$('ul').on('click', 'li', function (){
+				$('#result').text($(this).text());
+			});
+        });
+    </script>
 </head>
 <body>
-	<h1>제이쿼리 이벤트</h1>
-	 <ul>
-		<li>부에노스 아이레스</li>
-		<li>바르셀로나</li>
-		<li>리마</li>
-		<li>라파스</li>
-	 </ul>	
-	<div id="result"></div>
+<h1>제이쿼리 이벤트</h1>
+<ul>
+    <li>부에노스 아이레스</li>
+    <li>바르셀로나</li>
+    <li>리마</li>
+    <li>라파스</li>
+</ul>
+<div id="result"></div>
 </body>
 </html>

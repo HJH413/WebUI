@@ -236,7 +236,7 @@ $(function () {//jquery start
             )
         );
     });
-        // delete btn 클릭하면 목록 삭제
+    // delete btn 클릭하면 목록 삭제
     $('#list_table').on("click", ".delete-link1", function (e) {
         // this == a의 부모의 부모는 tr태그
         $(this).parent().parent().remove();
@@ -298,7 +298,7 @@ $(function () {//jquery start
         p12.val(0)
     })
     //주문하기 버튼툴르면 총 주문금액에 표시
-    $('#order').on('click', function() {
+    $('#order').on('click', function () {
         $('#total_price').val(
             (Number($('#price1').val()) * 5300)
             + (Number($('#price2').val()) * 5100)
@@ -333,29 +333,29 @@ $(function () {//jquery start
     });
 */
 //포장 or 매장식사 선택
-let frm = document.querySelector('#frm');
+    let frm = document.querySelector('#frm');
 
-frm.onsubmit = function (e) {
-   e.preventDefault();
-   e.stopPropagation();
+    frm.onsubmit = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-   let sel1 = $('#sel1').is(":checked");
-   let sel2 = $('#sel2').is(":checked");
-   let prT = $('#total_price')
-   if(prT.val()===""){
-       alert("주문하기를 눌러주세요.")
-       return;
-   }  else {
-       if(sel1){
-           alert("맛있게 포장해드리겠습니다.")
-       } else if(sel2) {
-           alert("매장에서 맛있게드세요.")
-       } else {
-           alert("포장 또는 매장을 선택하세요.")
-           return;
-       }
-   }
-   frm.submit();
-}
+        let sel1 = $('#sel1').is(":checked");
+        let sel2 = $('#sel2').is(":checked");
+        let prT = $('#total_price')
+        if (prT.val() === "") {
+            alert("주문하기를 눌러주세요.")
+            return;
+        } else {
+            if (sel1) {
+                alert("맛있게 포장해드리겠습니다.")
+            } else if (sel2) {
+                alert("매장에서 맛있게드세요.")
+            } else {
+                alert("포장 또는 매장을 선택하세요.")
+                return;
+            }
+        }
+        frm.submit();
+    }
 
 });//jquery end
