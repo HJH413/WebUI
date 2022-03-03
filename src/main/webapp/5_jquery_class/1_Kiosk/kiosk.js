@@ -22,6 +22,13 @@ $(function () {//jquery start
             + (Number($('#price12').val()) * 5300)
         )
     });*/
+    //광고판
+    $('.advertisement').bxSlider({auto: true,
+        autoControls: true,
+        stopAutoOnClick: true,
+        pager: true,
+        slideWidth: 400});
+
 
     //주문목록 띄우기
     let p1 = $('#price1')

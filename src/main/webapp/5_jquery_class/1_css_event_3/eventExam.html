@@ -1,0 +1,84 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title> new document </title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  $(function(){
+   //초기 설정
+   var size=12;
+   var body=$("body");
+    //① 글자 크기의 버튼들을 클릭했을 때
+    $(".zoom button").on("click",function(){
+        var btn_index=$(".zoom button").index(this);  //클릭한 버튼의 인덱스 반환
+        
+		if(btn_index==0){ //"+"를 클릭했을 경우
+           size++; //size가 1씩 증가
+           body.css("font-size",size+"px"); //글자 크기 속성이 변경됨.
+        }else if(btn_index==2){ //"-"를 클릭했을 경우
+           size--; //size가 1씩 감소
+           body.css("font-size",size+"px"); //글자 크기 속성이 변경됨.
+        }else{ //"0"를 클릭했을 경우
+		   size=12; //디폴트로 다시 세팅
+           body.css("font-size","12px"); //글자 크기 속성이 12px로 변경됨.
+        }
+		$("#lbl_fontsize").text(size); //글자크기 출력
+    });
+
+    //② 글자 모양을 선택했을 때 
+    $("#fs").on("change",function(){
+      body.css("font-family",$(this).val()); //글자 모양 변경
+    });
+  });
+
+
+
+//]]>
+</script>
+<style type="text/css">
+  *{margin:0;padding:0;}
+  body{font:12px dotum,"돋움",sans-serif;margin:20px;}
+
+  #f_wrap dt{font-weight:bold;margin-top:10px;}
+  #txt_wrap{width:90%;margin-top:20px;}
+  #f_wrap .zoom button{width:20px;height:20px;}
+
+
+</style>
+</head>
+<body>
+ <div id="f_wrap">
+    <dl>
+      <dt>글자크기 (<span id="lbl_fontsize">12</span>px) </dt>
+      <dd class="zoom">
+        <button>+</button>
+        <button>0</button>
+        <button>-</button>
+      </dd>
+      <dt>글자모양</dt>
+      <dd class="f_style">
+          <select name="fs" id="fs">
+            <option value="dotum,'돋움',sans-serif">돋움</option>
+            <option value="gulim, '굴림', sans-serif">굴림</option>
+            <option value="magun gothic, '맑은고딕', sans-serif">맑은고딕</option>
+            <option value="gungsuh, '궁서', serif">궁서</option>
+          </select>
+      </dd>
+    </dl>
+ </div>
+
+
+ <p id="txt_wrap">
+ 
+ <h3> 웹표준. </h3>
+
+ 웹 표준은 월드 와이드 웹의 측면을 서술하고 정의하는 공식 표준이나 다른 기술 규격을 가리키는 일반적인 용어이다. 최근에 이 용어는 웹 사이트를 작성하는 데 중요도가 높아지고 있으며 웹 디자인, 개발과 관계가 있다.
+
+수많은 상호 의존성이 있는 표준들과 규격들 가운데 일부는 단지 월드 와이드 웹으로만 끝나는 것이 아니라, 인터넷의 관리 측면이기도 하며 이러한 표준들은 직간접적으로 웹 사이트, 웹 서비스 개발과 관리에 영향을 주고 있다. 이러한 것들 모두 "웹 표준"이라고 부르지만 웹 표준으로 이동하는 것을 찬성하는 사람들은 사용성과 접근성에 직접 영향을 미치는 더 높은 수준의 표준에 초점을 두는 경향이 있다. 더 넓은 뜻의 웹 표준은 다음을 이룬다:
+ </p>
+
+
+</body>
+</html>

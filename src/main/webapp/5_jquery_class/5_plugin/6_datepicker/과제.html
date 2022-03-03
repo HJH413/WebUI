@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/i18n/jquery-ui-i18n.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $.datepicker.setDefaults($.datepicker.regional['ko'])
+            $('#fromDate').datepicker(
+                {
+                    showAnim: 'slideDown',
+                }
+            );
+            $('#toDate').datepicker(
+                {
+                    showAnim: 'slideDown',
+                }
+            );
+
+
+            $('#sdate').datepicker();
+            $('#sdate').datepicker("option", "maxDate", $("#edate").val());
+            $('#sdate').datepicker("option", "onClose", function (selectedDate) {
+                $("#edate").datepicker("option", "minDate", selectedDate);
+            });
+
+            $('#edate').datepicker();
+            $('#edate').datepicker("option", "minDate", $("#sdate").val());
+            $('#edate').datepicker("option", "onClose", function (selectedDate) {
+                $("#sdate").datepicker("option", "maxDate", selectedDate);
+            });
+
+
+            /*
+            * 종료일에서 시작일에서 선택한 날짜까지 비활성화
+            * */
+
+
+            // let day1 = new Date('2020-12-31');
+            //$('#datepicker').datepicker('setDate', new Date('2020-12-31'))
+        })
+    </script>
+</head>
+
+<body>
+<form>
+    <label>시작일</label>
+    <input type="text" name="sdate" id="sdate">
+    ~
+    <label>종료일</label>
+    <input type="text" name="edate" id="edate">
+</form>
+
+
+</body>
+</html>

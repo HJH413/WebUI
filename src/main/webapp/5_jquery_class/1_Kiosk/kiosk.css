@@ -69,11 +69,15 @@ body {
     box-sizing: border-box;
     text-align: center;
     border-bottom: 1px solid rgba(121, 121, 121, 0.3);
+
 }
 #nav_id {
     background-color: #F0F0F0;
 }
-
+.advertisement{
+    display: flex;
+    align-items: center;
+}
 
 
 /*메뉴 관련 css*/
