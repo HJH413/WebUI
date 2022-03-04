@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>광고페이지</title>
+    <meta charset="UTF-8">
+    <title>광고페이지</title>
+    <!--
+    닫기 버튼이 눌렸을때 채크박스에 채크가 된 상태라면
+    쿠키에 저장
+    (쿠키명 : 'promotion', 쿠키값 : 'no', 기간 : 1일)
+    광고 윈도우 닫기
+    -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script> <!--쿠기도 플러그인으로-->
+    <script>
+        $(function () {
+            $('#closeWin').click(function () {
+                if ($('input[type="checkbox"]').is(':checked')) {
+                    $.cookie('promotion', 'no', {expires: 1}); // 이름 , 채크박스늘 눌렀을때 value 이름, 저장할 기간
+                    alert("쿠키 생성 확인")
+                }
+                window.close();
+            });
+        })
+        /*$(function(){
+            $('#closeWin').click(function(){
+                if($('input[type=checkbox]').is(':checked')){
+                    $.cookie('promotion' , 'no', {
+                        expires : 1
+                    });
+                }
+                window.close();
+            });
+        });*/
+
+    </script>
 </head>
 <body>
 <img alt="" src="./images/image.jpg"><br/>

@@ -4,8 +4,25 @@
 <meta charset="UTF-8" />
 <title>jquery.cookie</title>
 <script type="text/javascript"   src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script type="text/javascript"   src="js/jquery.cookie.js"></script>
+<script type="text/javascript"   src="js/jquery.cookie.js"></script> <!--쿠기도 플러그인으로-->
 <script type="text/javascript">
+
+  $(function (){
+    //2. 쿠키값을 얻어와서 화면에 출력
+    if($.cookie('myEmail')){
+      $('#txtMail').val($.cookie('myEmail'))
+    } //값이 있는 경우에만 불러오도록 뒷 처리 하기
+
+
+    //1.쿠기에저장
+    $('#btnSave').click(function (){
+
+      //변수 txt에 입력한 이메일 값을 저장
+      let txt = $('#txtMail').val();
+      $.cookie('myEmail', txt, {expires : 1});//쿠키의 저장이름, 저장할 것 ,기간은 하루단위
+      $('#txtMail').val('');
+    });
+  });
 
 </script>
 </head>

@@ -68,7 +68,7 @@ $(function () {
 
 
 
-    /*$('.check-all').click(function () {
+    $('.check-all').click(function () {
         //checkbox 에서 선택한다는 것은 checked
         // '위 조항 모두' 채크를 선택하면 위의 항목들 모두 체크
         if ($('.check-all').is(':checked')) {
@@ -78,11 +78,11 @@ $(function () {
         else {
             $(".agree").prop("checked", false)
         }
-        /!*- attr() :  HTML 속성 (Attribute) 취급
-        - prop() : javascript 프로퍼티 (Property) 취급*!/
-    });*/
+        /*- attr() :  HTML 속성 (Attribute) 취급
+        - prop() : javascript 프로퍼티 (Property) 취급*/
+    });
 
-    /*$('.check-all').click(function(){
+    $('.check-all').click(function(){
             $('.agree').prop("checked", $(this).is(":checked"));
     });
 
@@ -96,7 +96,7 @@ $(function () {
         //만약에 조항갯수와 동의한 조항갯수가 다르면 전체동의를 해제하고
         else $(".check-all").prop("checked", true);
         // 아니라면 전체동의를 채크해라
-    });*/
+    });
 
 
 });
